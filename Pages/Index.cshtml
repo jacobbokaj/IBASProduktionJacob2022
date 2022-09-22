@@ -19,7 +19,7 @@
             .then( function(data) {
                 let ts = ['x'].concat(data.map( x => new Date(x.date)));
                 let ib1 = ['IBv1'].concat(data.filter(x => x.model === 1).map( x => x.itemsProduced));
-                let ev100 = ['evIB100'].concat(data.filter(x => x.model === 2).map( x => x.itemsProduced));
+                let ev100 = ['evIB100'].concat(data.filter(x => x.model === 0).map( x => x.itemsProduced));
                 let ev200 = ['evIB200'].concat(data.filter(x => x.model === 3).map( x => x.itemsProduced));
                 this.graphSummaryData([ts, ib1, ev100, ev200], "Production", "#daily_production_graph");
             });
