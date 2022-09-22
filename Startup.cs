@@ -19,7 +19,7 @@ namespace DailyProduction
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            //fsd
+            //fsd//fsd
         }
 
         public IConfiguration Configuration { get; }
