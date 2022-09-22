@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "IBAS Daily Production";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Daily Production</h2>
+</div>
+
+<div class="h-100 d-flex justify-content-center" >
+    <div style="width: 75%" id="daily_production_graph"></div>
+</div>
+
+@section Scripts
+{
+    <script>       
+        d3.json("/dailyproduction")
+            .then( function(data) {
+                let ts = ['x'].concat(data.map( x => new Date(x.date)));
+                let ib1 = ['IBv1'].concat(data.filter(x => x.model === 1).map( x => x.itemsProduced));
+                let ev100 = ['evIB100'].concat(data.filter(x => x.model === 2).map( x => x.itemsProduced));
+                let ev200 = ['evIB200'].concat(data.filter(x => x.model === 3).map( x => x.itemsProduced));
+                this.graphSummaryData([ts, ib1, ev100, ev200], "Production", "#daily_production_graph");
+            });
+    </script>
+}
