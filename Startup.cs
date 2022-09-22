@@ -58,7 +58,7 @@ namespace DailyProduction
             app.UseRouting();
 
             app.UseAuthorization();
-
+//ff
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
