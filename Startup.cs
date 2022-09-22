@@ -19,6 +19,7 @@ namespace DailyProduction
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            //Hejsa
         }
 
         public IConfiguration Configuration { get; }
