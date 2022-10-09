@@ -24,7 +24,7 @@ namespace IbasAPI.Controllers
             _logger = logger;
 
             //this.tableClient = new TableClient("DefaultEndpointsProtocol = https; AccountName = jacob360; AccountKey = LK7AJjQBghV7mJPDR7XGD0w6Phc5tcssfaSQA3B + u / T5tDQKN7JsF4ClIX6xwBWIwobH + p5iy15H + AStOgeCKQ ==; BlobEndpoint = https://jacob360.blob.core.windows.net/;QueueEndpoint=https://jacob360.queue.core.windows.net/;TableEndpoint=https://jacob360.table.core.windows.net/;FileEndpoint=https://jacob360.file.core.windows.net/;");
-            this.tableClient = new TableClient(new Uri("https://jacob360.table.core.windows.net"), "IBASProduktion2020", new TableSharedKeyCredential("jacob360", "LK7AJjQBghV7mJPDR7XGD0w6Phc5tcssfaSQA3B+u/T5tDQKN7JsF4ClIX6xwBWIwobH+p5iy15H+AStOgeCKQ=="));
+            this.tableClient = new TableClient(new Uri("https://jacob360.table.core.windows.net"), "IBASProduktion2022", new TableSharedKeyCredential("jacob360", "LK7AJjQBghV7mJPDR7XGD0w6Phc5tcssfaSQA3B+u/T5tDQKN7JsF4ClIX6xwBWIwobH+p5iy15H+AStOgeCKQ=="));
             Pageable <TableEntity> entities = this.tableClient.Query<TableEntity>();
 
         }
